@@ -4,7 +4,7 @@
 # multiple times if desired. Negative amounts and non-integer inputs are not allowed.
 
 # author: Neil Fitzgerald
-# sources used: 
+# sources used: Stack Overflow, Python documentation, lecture notes, and ChatGPT for error checking when stuck.
 
 # Infinite loop that asks the user if they wish to re-run the program again. 
 # Can only break by inputting 'n' or 'no'. 
