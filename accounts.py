@@ -1,3 +1,5 @@
+# Week 3: 
+# Author: Neil Fitzgerald 
 # This program prompts the user for an account number and
 # masks all but the last 4 digits with Xs. If the account number is not
 # 10 digits long, it displays a warning and prompts the user to continue.
