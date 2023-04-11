@@ -1,4 +1,4 @@
-# weekday_checker.py
+# weekday.py
 # This program checks if today is a weekday or a weekend.
 # author: Neil Fitzgerald
 # Sources used: Python documentation, lecture notes, and ChatGPT for error checking when stuck.
