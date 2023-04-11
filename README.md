@@ -95,12 +95,16 @@ Enter a positive number: 25
 The square root of 25.0 is approximately 5.0
 Do you want to compute another squareroot? (y/n): n
 
+---
+
 ### Task07: es.py
 
 This program reads a text file and counts the number of occurrences of the letter 'e' (case-insensitive) in the file.
 
 **Example output:**
 The letter 'e' occurs 47 times in the file.
+
+---
 
 ### Task08: plottask.py
 
@@ -113,14 +117,18 @@ matplotlib
 A histogram plot
 A plot of the function h(x)=x^3
 
+---
+
 ## Note on Commits
 
 There are fewer commits than expected in this repository due to consolidating work and uploading the files all at once. Future repositories will have more frequent and detailed commit messages to better track changes and progress.
 
+---
+
 ## References
 
-Python Documentation: https://docs.python.org/3/
-NumPy Documentation: https://numpy.org/doc/stable/
-Matplotlib Documentation: https://matplotlib.org/stable/contents.html
-Newton-Raphson Method: https://en.wikipedia.org/wiki/Newton%27s_method
+Python Documentation: https://docs.python.org/3/  
+NumPy Documentation: https://numpy.org/doc/stable/  
+Matplotlib Documentation: https://matplotlib.org/stable/contents.html  
+Newton-Raphson Method: https://en.wikipedia.org/wiki/Newton%27s_method  
 ChatGPT: OpenAI. (2021). GPT-3.5. https://openai.com/blog/gpt-3-5/
