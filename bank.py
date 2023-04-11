@@ -2,12 +2,10 @@
 # This program prompts the user to enter two amounts in cents, adds them together,
 # and displays the result in euro.cent format. The user can repeat the program
 # multiple times if desired. Negative amounts and non-integer inputs are not allowed.
-
 # author: Neil Fitzgerald
 # sources used: Stack Overflow, Python documentation, lecture notes, and ChatGPT for error checking when stuck.
 
-# Infinite loop that asks the user if they wish to re-run the program again. 
-# Can only break by inputting 'n' or 'no'. 
+# Infinite loop that asks the user if they wish to re-run the program again. Can only break by inputting 'n' or 'no'. 
 continue_program = True
 while continue_program:
     # SECTION 1: User is asked to enter first amount in cents.
@@ -46,7 +44,8 @@ while continue_program:
 
     # Calculate the total amount and display it in euro.cent format
     total_amount = first_amount + second_amount
-    print("The total amount is: {0:.2f} euro.cent".format(total_amount/100))
+    print("The total amount is: \u20AC{0:.2f}".format(total_amount/100))
+
 
     #SECTION 3: Ask user if they want to repeat the program
     # To break the loop the user will be asked if they want to repeat the process. If they select no the loop breaks. If they select yes they start again.
