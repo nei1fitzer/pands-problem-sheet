@@ -71,7 +71,7 @@ A program that prompts the user to enter a positive integer and then applies the
 Enter a positive integer: 10
 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
 Number of steps: 6
-Do you want to run the program again? (y/n)
+Do you want to run the program again? (y/n) n
 
 ---
 
