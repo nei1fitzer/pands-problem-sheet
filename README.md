@@ -114,8 +114,8 @@ A Python script that plots a histogram of a normal distribution of 1000 values w
 matplotlib
 
 **Example output:**
-A histogram plot
-A plot of the function h(x)=x^3
+
+![histogram plot & plot of the function h(x)=x^3](Task08_image.png)
 
 ---
 
