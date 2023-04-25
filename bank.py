@@ -42,9 +42,10 @@ while continue_program:
         print("Invalid input. Please enter a valid integer.")
         continue
 
-    # Calculate the total amount and display it in euro.cent format
+     # Calculate the total amount and display it in euro.cent format
     total_amount = first_amount + second_amount
-    print("The total amount is: \u20AC{0:.2f}".format(total_amount/100))
+    euros, cents = divmod(total_amount, 100)
+    print("The total amount is: \u20AC{0}.{1:02d}".format(euros, cents))
 
 
     #SECTION 3: Ask user if they want to repeat the program
