@@ -1,4 +1,4 @@
-# plottask.py
+##plottask.py
 # This program generates a histogram of 1000 values from a normal distribution with a mean of 5 and a standard deviation of 2.
 # It also plots the function h(x) = x^3 in the range [0, 10] on separate subplots.
 # author: Neil Fitzgerald
@@ -18,14 +18,11 @@ samples = np.random.normal(loc=mean, scale=std_dev, size=1000)
 # Set the style for the plot (more options can be found at: https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html)
 plt.style.use('seaborn-darkgrid')
 
-# Create a 1x2 grid of subplots
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
+# Create a single plot
+fig, ax = plt.subplots(figsize=(12, 6))
 
-# Create a histogram to show the samples on the first subplot
-n, bins, patches = ax1.hist(samples, bins=30, density=True, alpha=0.5, color='blue', label='Sample Distribution')
-ax1.set_xlabel('Sample Values', fontsize=12)
-ax1.set_ylabel('Density', fontsize=12)
-ax1.set_title('Normal Distribution', fontsize=16)
+# Create a histogram to show the samples
+n, bins, patches = ax.hist(samples, bins=30, density=True, alpha=0.5, color='blue', label='Sample Distribution')
 
 # Define our function h(x) which is equal to x cubed
 def h(x):
@@ -34,18 +31,23 @@ def h(x):
 # Generate x values from 0 to 10
 x_values = np.linspace(0, 10, 1000)
 
-# Plot our function h(x) on the second subplot
-ax2.plot(x_values, h(x_values), linewidth=2, color='red', label='Function Plot')
-ax2.set_xlabel('x', fontsize=12)
-ax2.set_ylabel('h(x)', fontsize=12)
-ax2.set_title('Function Plot', fontsize=16)
+# Normalize the h(x) function by dividing its values by the maximum value of h(x) within the range
+h_values_normalized = h(x_values) / max(h(x_values))
 
-# Add legends to the subplots
-ax1.legend(fontsize=10, loc='upper right', frameon=True)
-ax2.legend(fontsize=10, loc='upper left', frameon=True)
+# Calculate the maximum value of the histogram
+hist_max = max(n)
 
-# Adjust the spacing between subplots
-plt.subplots_adjust(wspace=0.4)
+# Adjust the y-axis limits to accommodate both the histogram and h(x) plot
+ax.set_ylim(0, hist_max + 0.1)
+
+# Plot the normalized h(x) values on the same plot
+ax.plot(x_values, h_values_normalized * hist_max, linewidth=2, color='red', label='Function Plot')
+ax.set_xlabel('x', fontsize=12)
+ax.set_ylabel('Density / h(x)', fontsize=12)
+ax.set_title('Normal Distribution and Function Plot', fontsize=16)
+
+# Add legends to the plot
+ax.legend(fontsize=10, loc='upper left', frameon=True)
 
 # Show our awesome plot
 plt.show()
