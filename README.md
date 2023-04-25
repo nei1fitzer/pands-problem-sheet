@@ -108,7 +108,7 @@ The letter 'e' occurs 47 times in the file.
 
 ### Task08: plottask.py
 
-A Python script that plots a histogram of a normal distribution of 1000 values with a mean of 5 and standard deviation of 2, and a plot of the function h(x) = x^3 in the range [0, 10].
+A Python script that plots a histogram of a normal distribution of 1000 values with a mean of 5 and a standard deviation of 2, along with a plot of the normalized function h(x) = x^3 in the range [0, 10] on the same axis
 
 **Requirements:**
 matplotlib
