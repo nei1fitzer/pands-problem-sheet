@@ -20,37 +20,34 @@ def get_positive_integer() -> int:
             print("Error: Invalid input. Please enter a positive integer.")
 
 
-def generate_collatz_sequence(num: int, step_count: int = 0, unique_values: set = None) -> None:
-    #Generate the Collatz sequence for the given positive integer using recursion.
-    
-    # Initialize the set of unique values on the first call
-    if unique_values is None:
-        unique_values = set()
+def generate_collatz_sequence(num: int) -> None:
+    # Generate the Collatz sequence for the given positive integer using a loop.
 
-    # If the current value has been seen before, exit with an error message
-    if num in unique_values:
-        print("\nError: Infinite loop detected.")
-        sys.exit()
-    unique_values.add(num)  # Add the current value to the set of seen values
+    step_count = 0
+    unique_values = set()
 
-    # Print the current number in the Collatz sequence
+    while num != 1:
+        # If the current value has been seen before, exit with an error message
+        if num in unique_values:
+            print("\nError: Infinite loop detected.")
+            sys.exit()
+        unique_values.add(num)  # Add the current value to the set of seen values
+
+        # Print the current number in the Collatz sequence
+        print(num, end=" ")
+
+        # If the current value is even, divide it by 2; if it's odd, multiply by 3 and add 1
+        if num % 2 == 0:
+            num = num // 2
+        else:
+            num = num * 3 + 1
+
+        step_count += 1
+
+    # Print the final number (1) in the Collatz sequence and the total number of steps
     print(num, end=" ")
-
-    # If the current value is 1, print the total number of steps and return
-    if num == 1:
-        print(f"\nNumber of steps: {step_count}")
-        return
-
-    # If the current value is even, divide it by 2; if it's odd, multiply by 3 and add 1
-    if num % 2 == 0:
-        next_num = num // 2
-    else:
-        next_num = num * 3 + 1
-
-    # Recursively call the function with the next number in the sequence
-    generate_collatz_sequence(next_num, step_count + 1, unique_values)
-
-
+    print(f"\nNumber of steps: {step_count}")
+1
 while True:
     input_num = get_positive_integer()
     generate_collatz_sequence(input_num)
