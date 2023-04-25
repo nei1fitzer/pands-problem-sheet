@@ -1,4 +1,4 @@
-# es.py
+## es.py
 # This program counts the number of 'e's in a plain text file.
 # The user provides the file name as a command-line argument
 # e.g. if saved in the same folder as the script and the name of the file is Test123, you would type python es.py Test123.txt
