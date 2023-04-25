@@ -115,7 +115,7 @@ matplotlib
 
 **Example output:**
 
-![histogram plot & plot of the function h(x)=x^3](Task08_image.png)
+![histogram plot & plot of the function h(x)=x^3](Task08_image_updated.png)
 
 ---
 
