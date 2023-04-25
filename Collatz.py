@@ -1,6 +1,6 @@
 # collatz.py
 # This program prompts the user to input a positive integer and generates the Collatz sequence for the given number.
-# If the sequence enters an infinite loop, the program will exit with an error message.
+# If the sequence enters an infinite loop, the program will exit with an error message (recursion removed and replaced with loop)
 # author: Neil Fitzgerald
 # Sources used: Stack Overflow, Python documentation, lecture notes, and OpenAI's ChatGPT for error checking when stuck.
 
