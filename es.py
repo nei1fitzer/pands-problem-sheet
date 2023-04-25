@@ -14,19 +14,17 @@ import sys
 
 # count_e: A function to count the 'e's in a file
 def count_e(filename):
-    # Open the file in readmode (and close it automatically when done)
-    with open(filename, "r") as file:
-        # Put the content into a string
-        content = file.read()
-
-    # Begining of the 'e' counter
     count = 0
 
-    # Analyse every character within the file
-    for char in content:
-        # If we've got an 'e' or an 'E', add to the counter
-        if char.lower() == "e":
-            count += 1
+    # Open the file in read mode (and close it automatically when done)
+    with open(filename, "r") as file:
+        # Read the file line by line
+        for line in file:
+            # Analyze every character within the line
+            for char in line:
+                # If we've got an 'e' or an 'E', add to the counter
+                if char.lower() == "e":
+                    count += 1
 
     # Show the 'e' count and the file's name
     print(f"The file '{filename}' contains {count} e's.")
